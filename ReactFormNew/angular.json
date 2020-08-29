@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ReactForm": {
+    "ReactFormNew": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ReactForm",
+            "outputPath": "dist/ReactFormNew",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ReactForm:build"
+            "browserTarget": "ReactFormNew:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ReactForm:build:production"
+              "browserTarget": "ReactFormNew:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ReactForm:build"
+            "browserTarget": "ReactFormNew:build"
           }
         },
         "test": {
@@ -110,19 +110,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ReactForm:serve"
+            "devServerTarget": "ReactFormNew:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ReactForm:serve:production"
+              "devServerTarget": "ReactFormNew:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "ReactForm",
+  "defaultProject": "ReactFormNew",
   "cli": {
-    "analytics": "660a7209-3c6c-49b8-a7d6-8816dbdca382"
+    "analytics": "d545edd0-bf01-4fca-891d-b6a65b23968c"
   }
 }
