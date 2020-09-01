@@ -1,17 +1,23 @@
 <form [formGroup]="groupForm" (ngSubmit)="login()">
     <div class="container">
-      <label><b>Username</b></label>
-      <input type="text" id="name" formControlName="name" required>
-      <span *ngIf="!groupForm.get('name').valid" class="cs1">
+      <mat-form-field class="field1">
+        <input matInput placeholder="Username" formControlName="name" required>
+      </mat-form-field>
+      <br>
+      <span *ngIf="!groupForm.get('name').valid && groupForm.get('name').touched" class="cs1">
         Please enter a valid username
       </span>
       <br>
-      <label><b>Password</b></label>
-      <input type="password" id="password" formControlName="password" required>
-      <span *ngIf="!groupForm.get('password').valid" class="cs2">
+      <mat-form-field class="field2">
+        <input matInput placeholder="Password" formControlName="password" required>
+      </mat-form-field>
+      <br>
+      <span *ngIf="!groupForm.get('password').valid && groupForm.get('password').touched" class="cs2">
         Please enter a valid password
       </span>
       <br>
-      <button type ="submit" id="button" [disabled]= "!groupForm.valid" >Log In</button>
+      <button mat-button color= "primary" type ="submit" [disabled]= "!groupForm.valid" >Log In</button>
     </div>
   </form>
+  <br>
+  <a routerLink= "/home" routerLinkActive= "active">Home</a>  
